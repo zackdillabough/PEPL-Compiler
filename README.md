@@ -16,37 +16,42 @@ Polynomials are declared with the following 2 forms of syntax:
 
 1.) ```POLY <name> = <polynomial>;```
 
-&nbsp;&nbsp;&nbsp;&nbsp;note: polynomials declared of this form have only one default parameter, ```x```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note: polynomials declared of this form have only one default parameter, ```x```
 
-ex.) ```POLY F = x^2 + x - 1;```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```POLY F = x^2 + x - 1;```
 
 2.) ```POLY <name>(<parameters>) = <polynomial>;```
 
-ex.) ```POLY X(p, i) = p*(i + 22/7);```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```POLY X(p, i) = p*(i + 22/7);```
       
 ### The START section
   The beginning of this section starts with a single line that reads "START".
   The following lines can consist of the following statements:
-1.) initializing a user input variable using the form: INPUT <variable name>;
+  
+1.) initializing a user input variable using the form: ```INPUT <variable name>;```
 
-&nbsp;&nbsp;&nbsp;&nbsp;note: inputs are assigned to variables in the order in which they are provided.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note: inputs are assigned to variables in the order in which they are provided.
 
-ex.) "INPUT G;"
-&nbsp;&nbsp;&nbsp;&nbsp;G will equal the int-value x if the input section consists of "```x w```" (where ```x``` is an integer, and ```w``` is a potentially empty list of integers delimited by spaces).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) "INPUT G;"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G will equal the int-value x if the input section consists of "```x w```" (where ```x``` is an integer, and ```w``` is a potentially empty list of integers delimited by spaces).
 
-2.) polynomial function call: <name>(<argument list>);
+2.) polynomial function call: ```<name>(<argument list>);```
 
-ex.) ```F(1);```
-ex.) ```F(G);```
-ex.) ```X(G, i);```
-ex.) ```F(X(5, G));```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```F(1);```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```F(G);```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```X(G, i);```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```F(X(5, G));```
+
 
 ### The user input section
-  This section is a line at the bottom of the program that consists of a non-empty list of integers.
-  There must be a sufficient number of integers specified in this line for all INPUT statements.
-  (There cannot be more INPUT statements than there are user inputs)
+This section is a line at the bottom of the program that consists of a non-empty list of integers.
+There must be a sufficient number of integers specified in this line for all INPUT statements.
+(There cannot be more INPUT statements than there are user inputs)
   
-    ex.) ```-3 1 4 1 5 9```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```-3 1 4 1 5 9```
 
 ### Simple Examples
 Program_1.txt
