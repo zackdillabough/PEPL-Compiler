@@ -7,7 +7,7 @@ This compiler takes programs written in a text file as input via redirection.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```$ ./a.out < program.txt```
 
-A program written in this language is composed of three sections (in order):
+A program written in the compiler-specific language is composed of three sections (in order):
 
 1. A polynomial declaration section
 2. A START section
@@ -16,13 +16,13 @@ A program written in this language is composed of three sections (in order):
 ### The Polynomial Declaration Section:
 Polynomials are declared with the following 2 forms of syntax:
 
-1.) ```POLY <name> = <polynomial>;```
+**form 1:** ```POLY <name> = <polynomial>;```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note: polynomials declared in this form have only one default parameter, ```x```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```POLY F = x^2 + x - 1;```
 
-2.) ```POLY <name>(<parameter list>) = <polynomial>;```
+**form 2:** ```POLY <name>(<parameter list>) = <polynomial>;```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```POLY X(p, i) = p*(i + 22/7);```
       
@@ -36,7 +36,8 @@ The following lines can consist of the following statements:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note: inputs are assigned to variables in the order in which they are provided.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) "INPUT G;"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```INPUT G;```
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G will equal the int-value x if the input section consists of "```x w```" (where ```x``` is an integer, and ```w``` is a potentially empty list of integers delimited by spaces).
 
 2.) polynomial function call 
