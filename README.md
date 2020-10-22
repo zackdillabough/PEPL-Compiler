@@ -1,41 +1,47 @@
 # CSE340_Project1
 ## Description
-This is a simple compiler for a simple programming language used ultimately for polynomial evaluation. 
+This project is a simple compiler for a polynomial-evaluation programming language. 
 
 ## Usage
-Programs are written on a text file, that are then passed to the program via redirection.
+This compiler takes programs written in a text file as input via redirection.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```$ ./a.out < program.txt```
 
 A program written in this language is composed of three sections (in order):
 
 1. A polynomial declaration section
-2. A START section, where polynomials are called for evaluation as functions
+2. A START section
 3. A user input section
 
-### The polynomial declaration section:
+### The Polynomial Declaration Section:
 Polynomials are declared with the following 2 forms of syntax:
 
 1.) ```POLY <name> = <polynomial>;```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note: polynomials declared of this form have only one default parameter, ```x```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note: polynomials declared in this form have only one default parameter, ```x```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```POLY F = x^2 + x - 1;```
 
-2.) ```POLY <name>(<parameters>) = <polynomial>;```
+2.) ```POLY <name>(<parameter list>) = <polynomial>;```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```POLY X(p, i) = p*(i + 22/7);```
       
-### The START section
-  The beginning of this section starts with a single line that reads "START".
-  The following lines can consist of the following statements:
+### The START Section
+The beginning of this section starts with a single line that reads ```START```.
+The following lines can consist of the following statements:
   
-1.) initializing a user input variable using the form: ```INPUT <variable name>;```
+1.) initializing a user-input variable
+
+&nbsp;&nbsp;&nbsp;&nbsp;**form:** ```INPUT <variable name>;```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;note: inputs are assigned to variables in the order in which they are provided.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) "INPUT G;"
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G will equal the int-value x if the input section consists of "```x w```" (where ```x``` is an integer, and ```w``` is a potentially empty list of integers delimited by spaces).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G will equal the int-value x if the input section consists of "```x w```" (where ```x``` is an integer, and ```w``` is a potentially empty list of integers delimited by spaces).
 
-2.) polynomial function call: ```<name>(<argument list>);```
+2.) polynomial function call 
+
+&nbsp;&nbsp;&nbsp;&nbsp;**form:** ```<name>(<argument list>);```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```F(1);```
 
@@ -46,10 +52,9 @@ Polynomials are declared with the following 2 forms of syntax:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```F(X(5, G));```
 
 
-### The user input section
+### The User Input Section
 This section is a line at the bottom of the program that consists of a non-empty list of integers.
-There must be a sufficient number of integers specified in this line for all INPUT statements.
-(There cannot be more INPUT statements than there are user inputs)
+There must be a sufficient number of integers specified in this line for all INPUT statements (There cannot be more INPUT statements than there are user inputs).
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```-3 1 4 1 5 9```
 
