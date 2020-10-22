@@ -1,7 +1,11 @@
 /*
- * Copyright (C) Rida Bazzi, 2019
+ * Copyright (C) Rida Bazzi, 2020
  *
  * Do not share this file with anyone
+ *
+ * Do not post this file or derivatives of
+ * of this file online
+ *
  */
 #ifndef __PARSER_H__
 #define __PARSER_H__

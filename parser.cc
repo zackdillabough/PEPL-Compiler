@@ -16,9 +16,6 @@
 #include <vector>
 #include <string>
 #include "parser.h"
-//#define NUM 0
-//#define ID 1
-//#define POLY_EVAL 2
 
 using namespace std;
 
@@ -61,9 +58,8 @@ int input_table::get_var(string str) {
 	for (int i = 0; i < var_map.size(); i++) {
 		if(var_map[i].first.compare(str) == 0) 
 			return i;
-			//return var_map[i].second;
 	}
-	return -1; // put error here
+	return -1;
 }
 
 
@@ -83,7 +79,7 @@ int polynomial::get_param(string p) {
 			return i;
 	}
 
-	return -1; // put error here?
+	return -1;
 }
 
 polynomial::polynomial() {
@@ -144,7 +140,6 @@ stmt::stmt() {
 // Error functions
 //////////////////////////////////////////////////////
 
-// {{{
 
 void Parser::syntax_error(int lineno)
 {
@@ -184,7 +179,6 @@ void Parser::checkE1() {
 		printf("Error Code 1: ");
 		for (int i = 0; i < linenos.size(); i++)
 			printf("%d ", linenos[i]);
-		//printf("\n");
 	}
 
 	if (errorno != 0)
@@ -206,7 +200,8 @@ void Parser::error_code_2() {
 		printf("%d ", error_t[i]);
 	}
 
-	exit(1);}
+	exit(1);
+}
 
 // Error code 3 indicates that a polynomial being attempted to be evaluated has not been declared.
 void Parser::error_code_3() {
@@ -251,7 +246,6 @@ void Parser::error_code_5() {
 
 	exit(1);
 }
-// }}}
 
 // this function gets a token and checks if it is
 // of the expected type. If it is, the token is
@@ -278,7 +272,7 @@ int Parser::get_polyname(string str){
 	}
 
 	errorno = 3;
-	return -1; // put error here
+	return -1;
 }
 
 //////////////////////////////////////////////////////
@@ -396,8 +390,6 @@ void Parser::parse_input() {
 		execute_program(st_list);
 
 }
-
-// polynomial declaration section {{{
 
 // program -> poly_decl_section start
 stmt* Parser::parse_program() {
@@ -811,11 +803,6 @@ stmt* Parser::parse_statement() {
 		st->stmt_type = POLY;
 		poly_eval* poly_e = parse_poly_evaluation_statement(); 
 		st->pe = poly_e;
-
-//		if (poly_e->alist->size() != p_table[poly_e->poly]->param_names.size()) {
-//			error_t.push_back(t.line_no);
-//			errorno = 4;
-//		}
 
 		return st;
 	}
