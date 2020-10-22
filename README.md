@@ -74,44 +74,44 @@ $ ./a.out < Program_1.txt
 ```  
 Program_2.txt
 ```
-    POLY A(M, N) =
-            M^6 + 3 N - N^2 + 71;
-    POLY B(O, P, Q) = 1 O + 2 P + 3 Q - 4;
-    POLY C(R, S, T) = S + 100;
-    POLY D
-            (U, V, W) = U^2 + 4 V^2 W^3 - 6 U^1 V^4;
-    POLY E = x^5 - x^4 + 2;
-    START
-    INPUT X;
-    INPUT Y;
-    A(X, Y);
+POLY A(M, N) =
+      M^6 + 3 N - N^2 + 71;
+POLY B(O, P, Q) = 1 O + 2 P + 3 Q - 4;
+POLY C(R, S, T) = S + 100;
+POLY D
+      (U, V, W) = U^2 + 4 V^2 W^3 - 6 U^1 V^4;
+POLY E = x^5 - x^4 + 2;
+START
+INPUT X;
+INPUT Y;
+A(X, Y);
 
-    INPUT X;
-    INPUT Y;
-    INPUT Z;
-    B(X, Y, Z);
+INPUT X;
+INPUT Y;
+INPUT Z;
+B(X, Y, Z);
 
-    INPUT X;
-    INPUT Y;
-    INPUT Z;
-    C(X, Y, Z);
-    D(X, Y, Z);
+INPUT X;
+INPUT Y;
+INPUT Z;
+C(X, Y, Z);
+D(X, Y, Z);
 
-    INPUT X;
-    INPUT Y;
-    INPUT Z;
-    D(X, Y, Z);
-    E(Z);
+INPUT X;
+INPUT Y;
+INPUT Z;
+D(X, Y, Z);
+E(Z);
 
-    1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6
+1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6
 ```
 Terminal Output
 ```
-    $ ./a.out < Program_1.txt
-    74
-    22
-    101
-    32
-    3401
-    2502
+$ ./a.out < Program_1.txt
+74
+22
+101
+32
+3401
+2502
 ```
