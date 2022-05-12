@@ -1,4 +1,4 @@
-# CSE340_Project1
+# Polynomial Evaluation Programming Language Compiler
 ## Description
 This project is a simple compiler for a polynomial-evaluation programming language. 
 
