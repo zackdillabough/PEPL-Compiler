@@ -1,4 +1,4 @@
-# Polynomial Evaluation Programming Language Compiler
+# PEPL Compiler
 ## Description
 This project is a simple compiler for a polynomial-evaluation programming language. 
 
