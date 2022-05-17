@@ -13,6 +13,8 @@ A program written in the compiler-specific language is composed of three section
 2. A START section
 3. A user input section
 
+---
+
 ### The Polynomial Declaration Section:
 Polynomials are declared with the following 2 forms of syntax:
 
@@ -26,6 +28,8 @@ Polynomials are declared with the following 2 forms of syntax:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```POLY X(p, i) = p*(i + 22/7);```
       
+---
+
 ### The START Section
 The beginning of this section starts with a single line that reads ```START```.
 The following lines can consist of the following statements:
@@ -52,6 +56,7 @@ The following lines can consist of the following statements:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```F(X(5, G));```
 
+---
 
 ### The User Input Section
 This section is a line at the bottom of the program that consists of a non-empty list of integers.
